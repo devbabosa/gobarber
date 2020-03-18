@@ -24,7 +24,7 @@ class User extends Model {
   }
 
   static associate({ File }) {
-    this.belongsTo(File, { foreignKey: 'avatar_id' });
+    this.belongsTo(File, { foreignKey: 'avatar_id', as: 'avatar' });
   }
 
   checkPassword(password) {
